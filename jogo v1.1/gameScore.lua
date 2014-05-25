@@ -60,7 +60,7 @@ function scene:createScene( event )
         local group = self.view
 		
         
-        gameOver = display.newImageRect("imagens/score.png", _W*0.5, _H*0.7)
+        gameOver = display.newImageRect("imagens/scorewin.png", _W*0.5, _H*0.7)
         gameOver.x = centerX
         gameOver.y = centerY
 

@@ -288,6 +288,7 @@ function geraCanos(x,y,j,d)
 			chama[i].x = x
 			chama[i].y = centerY*1.5
 			game:insert(chama[i])
+			physics.addBody(chama[i],"kinematic")
 
 			cano[i] = display.newImageRect( "imagens/cano1.png",_W*0.1,_W*0.15 )
 			cano[i].x = x
@@ -307,28 +308,28 @@ function geraCanos(x,y,j,d)
 				chama[i].x = chama[a].x + d
 				chama[i].y = y
 				game:insert(chama[i])
-				physics.addBody(chama[i],"static")
-				--chama[i].myName="bomba"
+				physics.addBody(chama[i],"kinematic")
+				chama[i].myName="bomba"
 
 				cano[i] = display.newImageRect( "imagens/cano1.png",_W*0.1,_W*0.15 )
 				cano[i].x = cano[a].x+d
 				cano[i].y= y
 				game:insert( cano[i] )
-				--physics.addBody(cano[i],"kinematic")
+				physics.addBody(cano[i],"static")
 
 			else
 				chama[i] = display.newImageRect("imagens/bolamal.png", _W*0.05, _H*0.08)
 				chama[i].x = chama[a].x + d
 				chama[i].y = y
 				game:insert(chama[i])
-				physics.addBody(chama[i],"static")
-				--chama[i].myName="bomba"
+				physics.addBody(chama[i],"kinematic")
+				chama[i].myName="bomba"
 
 				cano[i] = display.newImageRect( "imagens/cano2.png",_W*0.1,_W*0.15 )
 				cano[i].x = cano[a].x+d
 				cano[i].y= y
 				game:insert( cano[i] )
-				physics.addBody(cano[i],"kinematic")
+				physics.addBody(cano[i],"static")
 				
 
 			
